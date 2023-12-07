@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native/scripts/react-native-xcode.sh b/node_modules/react-native/scripts/react-native-xcode.sh
+index e6fc8d1..c35bdc6 100755
+--- a/node_modules/react-native/scripts/react-native-xcode.sh
++++ b/node_modules/react-native/scripts/react-native-xcode.sh
+@@ -140,7 +140,7 @@ fi
+ PACKAGER_SOURCEMAP_FILE=
+ if [[ $EMIT_SOURCEMAP == true ]]; then
+   if [[ $USE_HERMES != false ]]; then
+-    PACKAGER_SOURCEMAP_FILE="$CONFIGURATION_BUILD_DIR/$(basename $SOURCEMAP_FILE)"
++    PACKAGER_SOURCEMAP_FILE="$CONFIGURATION_BUILD_DIR/$(basename "$SOURCEMAP_FILE")"
+   else
+     PACKAGER_SOURCEMAP_FILE="$SOURCEMAP_FILE"
+   fi
